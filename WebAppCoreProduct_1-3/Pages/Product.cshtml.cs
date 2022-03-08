@@ -30,5 +30,22 @@ namespace WebAppCoreProduct_1_3.Pages
             Product.Price = price;
             Product.Name = name;
         }
+        public void OnPostDiscont(string name, decimal? price, double discont)
+        {
+            Product = new Product();
+            var result = price * (decimal?)discont / 100;
+            MessageRezult = $"Для товара {name} с ценой {price} и скидкой {discont} получится { result}";
+            Product.Price = price;
+            Product.Name = name;
+        }
+        public void OnPostDiscont_2(string name, decimal? price, double discont2)
+        {//
+            Product = new Product();
+            var result = price * (decimal?)discont2 / 100;
+            MessageRezult = $"Для товара {name} с ценой {price} и скидкой {discont2} получится { result}";
+            Product.Price = price;
+            Product.Name = name;
+        }
+
     }
 }
